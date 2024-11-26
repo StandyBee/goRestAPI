@@ -1,0 +1,14 @@
+basePath: /
+host: localhost:8094
+info:
+  contact: {}
+  description: GO Rest API Server for TODOList app
+  title: TODO App API
+  version: "1.0"
+paths: {}
+securityDefinitions:
+  ApiKeyAuth:
+    in: header
+    name: Authorization
+    type: apiKey
+swagger: "2.0"

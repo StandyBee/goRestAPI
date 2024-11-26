@@ -6,6 +6,15 @@ import (
 	"net/http"
 )
 
+// @Summary SignUp
+// @Tags Auth
+// @Description Create user account
+// @ID create-account
+// @Accept json
+// @Produce json
+// @Param input body gorestAPI.User true "account info"
+// @Success 200 {integer} integer 1
+// @Router /auth/sign-up [post]
 func (h *Handler) signUp(c *gin.Context) {
 	var input gorestAPI.User
 

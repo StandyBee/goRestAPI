@@ -1,0 +1,51 @@
+basePath: /
+definitions:
+  gorestAPI.User:
+    properties:
+      name:
+        type: string
+      password:
+        type: string
+      username:
+        type: string
+    required:
+    - name
+    - password
+    - username
+    type: object
+host: localhost:8094
+info:
+  contact: {}
+  description: GO Rest API Server for TODOList app
+  title: TODO App API
+  version: "1.0"
+paths:
+  /auth/sign-up:
+    post:
+      consumes:
+      - application/json
+      description: Create user account
+      operationId: create-account
+      parameters:
+      - description: account info
+        in: body
+        name: input
+        required: true
+        schema:
+          $ref: '#/definitions/gorestAPI.User'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: integer
+      summary: SignUp
+      tags:
+      - Auth
+securityDefinitions:
+  ApiKeyAuth:
+    in: header
+    name: Authorization
+    type: apiKey
+swagger: "2.0"

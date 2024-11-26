@@ -15,6 +15,17 @@ import (
 	"syscall"
 )
 
+// @title TODO App API
+// @version 1.0
+// @description GO Rest API Server for TODOList app
+
+// @host localhost:8094
+// @BasePath /
+
+// @securityDefinitions.apikey ApiKeyAuth
+// @in header
+// @name Authorization
+
 func main() {
 	logrus.SetFormatter(&logrus.JSONFormatter{})
 
